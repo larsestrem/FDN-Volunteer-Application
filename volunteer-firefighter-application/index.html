@@ -40,7 +40,18 @@
 	</script>
 </head>
 <body id="">
-
+	<script>
+	function getQueryVariable(variable)
+	{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+	}
+	</script>
 
 
 <div class="container" style="padding:0 5px 5px 5px">
@@ -107,7 +118,11 @@
 					<meta itemprop="url" content="http://www.firedepartment.net/directory/hawaii/hawaii-county/hilo/hawaii-fire-department/firefighters/robert-perreira">
 					<div class="header">
 			<h1>Volunteer Firefighter Application</h1>
-						<b style="font-size:large">Add Dept Name</b><br/>
+						<b style="font-size:large">
+						<script>
+							getQueryVariable("departmentname")
+							</script>
+						</b><br/>
 						<p>Fill out the form below. FireDepartment.net staff will forward each submission to the volunteer recruiter's email address provided by the fire department.</p>
 					</div>
 					<!-- Start Jotform Code -->
