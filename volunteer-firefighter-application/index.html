@@ -40,6 +40,23 @@
 	</script>
 </head>
 <body id="">
+
+<script>
+const queryString = window.location.search;
+console.log(queryString);
+const urlParams = new URLSearchParams(queryString);
+const DepartmentName = urlParams.get('departmentname')
+console.log(DepartmentName);
+// Department Name
+const FDURL = urlParams.get('fdurl')
+console.log(FDURL);
+// Fire Dept URL
+const VolunteerRecruiterName = urlParams.get('volunteerRecruiterName')
+console.log(VolunteerRecruiterName);
+// empty New User
+	
+</script>
+
 <div class="container" style="padding:0 5px 5px 5px">
 	<div id="nav-top">
 		<div class="container" style="margin:0;padding:0">
