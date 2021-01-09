@@ -51,9 +51,7 @@
 	var departmentnameValue = getUrlVars()["departmentname"];	
 	</script>
 
-	<script>
-	document.write(departmentname);
-	</script>
+	
 
 <div class="container" style="padding:0 5px 5px 5px">
 	<div id="nav-top">
@@ -120,7 +118,7 @@
 					<div class="header">
 <h1>Volunteer Firefighter Application</h1>
 <b style="font-size:large">
-<script>getQueryVariable("departmentname")</script>
+<script>document.write(departmentname);</script>
 </b><br/>
 <p>Fill out the form below. FireDepartment.net staff will forward each submission to the volunteer recruiter's email address provided by the fire department.</p>
 					</div>
